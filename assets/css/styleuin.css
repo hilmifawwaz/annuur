@@ -1,0 +1,70 @@
+.carousel {
+  box-shadow: 0 0 0 rgb(250 250 250 / 0%);
+}
+
+.jumbotron1 {
+  background-color: rgb(173, 231, 173);
+}
+.jumbotron1 img {
+  position: relative;
+  right: 150px;
+  width: 400px;
+  bottom: 80px;
+}
+.jumbotron1 p {
+  position: relative;
+  top: 100px;
+  left: 400px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+}
+.display-1 {
+  font-family: "Roboto";
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  top: 30px;
+}
+.jumbotron2 {
+  background-color: rgb(255, 255, 255);
+  padding: 15rem 1rem;
+}
+.display-2 {
+  font-family: "Roboto";
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  bottom: 250px;
+}
+.container-fluid p {
+  text-align: center;
+  margin-bottom: 1px;
+  position: relative;
+  bottom: 250px;
+}
+.col {
+  position: relative;
+  bottom: 200px;
+  width: 5px;
+  height: 10px;
+}
+.jumbotron3 {
+  background-color: rgb(221, 221, 221);
+  padding: 25rem 1rem;
+}
+.display-3 {
+  font-family: "Roboto";
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  bottom: 350px;
+}
+.container1 p {
+  text-align: center;
+  margin-bottom: 1px;
+  position: relative;
+  bottom: 350px;
+}

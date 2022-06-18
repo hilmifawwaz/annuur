@@ -1,0 +1,164 @@
+.bn-red>.bn-title>span {
+    border-left-color: #a52b20;
+}
+
+.fly-ticker {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    z-index: 999999;
+}
+
+.bn-title {
+    font-size: 14px !important;
+    color: #11793b !important;
+    padding: 0;
+    margin: 0;
+    line-height: 32px !important;
+    margin-right: 0;
+}
+
+.breakingNews {
+    height: 52px;
+    background: #ffffff;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.ticker-wrap {
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 52px;
+    padding-left: 100%;
+    box-sizing: content-box;
+}
+
+.ticker-wrap .ticker {
+    display: inline-block;
+    height: 52px;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
+}
+
+.ticker-wrap .ticker__item {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.ticker__item a {
+    color: #11793b;
+}
+
+.ticker__item a:hover {
+    color: #000000;
+}
+
+.ticker-wrap .ticker:hover {
+    animation-play-state: paused;
+
+}
+
+.image-inside-news {
+    margin: 20px;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.header-logo img {
+    margin-right: 5px !important;
+}
+
+.hedaer-line-bg2 {
+    background-color: #B9D101;
+    color: #ffffff;
+}
+
+.header-top-ticker {
+    background-color: #ecbb15;
+    border: none;
+    box-shadow: 0px 4px #ffc500;
+}
+
+.bn-label {
+    width: 520px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 10px solid #ecbb15;
+
+}
+
+.title-ticker-icon {
+    margin-top: -20px;
+    margin-left: 0;
+    text-align: left;
+
+}
+
+.imgbandel img{
+    width: 100%;
+  height: auto;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    div.example {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    div.example1 {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    div.example2 {
+      display: none;
+    }
+  }
+  
