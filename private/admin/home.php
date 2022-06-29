@@ -106,7 +106,7 @@
                     <?= $data_berita['isi']; ?>
                   </p>
                 </span>
-                <a href="page-berita.php?id=<?= $data['id'] ?>" class="btn btn-utama" style="margin-bottom: 30px;">Baca Selengkapnya</a>
+                <a href="page-berita.php?id=<?= $data_berita['id'] ?>" class="btn btn-utama" style="margin-bottom: 30px;">Baca Selengkapnya</a>
               </div>
             </div>
           <?php } ?>

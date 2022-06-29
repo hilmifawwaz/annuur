@@ -24,7 +24,7 @@ $result2 = mysqli_query($conn, $query2);
       <h3 class="fs-1 fw-bold" style="margin-top: 15px; font-size: 45px;"><a><?= $data['judul']; ?></a></h3>
       <div class="fs-6">Penulis : <?= $data['nama_pembuat']; ?> - <?= $newDate; ?></div>
       <div class="post-image single mb-lg">
-        <img class="img-thumbnail" name="gambar" src="/assets/img/berita/<?= $data['gambar']; ?>" style="height: 450px; width: 600px;" alt="">
+        <img class="img-thumbnail" name="gambar" src="../../assets/img/berita/<?= $data['gambar']; ?>" style="height: 450px; width: 600px;" alt="">
       </div>
       <span>
         <p class="text-dark mt-3" style="line-height: 1.5em; max-height: 7.5em; overflow: hidden;">
