@@ -2,49 +2,51 @@
   include 'navbar.php';
   include '../config.php';
 
-  $banner = "SELECT * FROM `banner`";
-  $berita = "SELECT * FROM `berita` WHERE `status` LIKE 'DITERIMA' ORDER BY `id` DESC";
-  $galeri = "SELECT * FROM `galeri`";
+  $queryBanner = "SELECT * FROM `banner`";
+  $queryBerita = "SELECT * FROM `berita` WHERE `status` LIKE 'DITERIMA' ORDER BY `id` DESC";
+  $queryGaleri = "SELECT * FROM `galeri`";
 
-  $bannerr = mysqli_query($conn, $banner);
-  $beritaa = mysqli_query($conn, $berita);
-  $galerii = mysqli_query($conn, $galeri);
+  $resultBanner = mysqli_query($conn, $queryBanner);
+  $resultBerita = mysqli_query($conn, $queryBerita);
+  $resultGaleri = mysqli_query($conn, $queryGaleri);
   ?>
 
   <body>
-    <!-- carousel -->
-
     <!-- Awal carousel -->
     <div class="container-fluid">
       <div class="row">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <?php
             $i = 0;
-            foreach ($bannerr as $row) {
-              $actives = '';
+            foreach ($resultBanner as $row) {
+              $active = '';
               if ($i == 0) {
-                $actives = 'active';
+                $active = 'class="active" aria-current="true"';
               } ?>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php $i; ?>" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <?php $i++;
-            } ?>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $i ?>" <?= $active ?> aria-label="Slide <?= intval($i) + 1 ?>"></button>
+            <?php
+              $i++;
+            }
+            ?>
           </div>
           <div class="carousel-inner">
             <?php
-            $i = 0;
-            foreach ($bannerr as $row) {
-              $actives = '';
-              if ($i == 0) {
-                $actives = 'active';
-              }
-            ?>
-              <div class="carousel-item active">
-                <img src="../../assets/img/banner/<?= $row['gambar']; ?>">
-              </div>
-            <?php $i++;
-            } ?>
+            $imgCount = 0;
+            foreach ($resultBanner as $row) {
+              $activeImg = '';
+              if ($imgCount == 0) {
+                $activeImg = 'active';
+              } ?>
 
+              <div class="carousel-item <?= $activeImg ?>">
+                <img src="../../assets/img/banner/<?= $row['gambar'] ?>" style="object-fit: cover;">
+              </div><?php
+
+                    $imgCount++;
+                  }
+                    ?>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -85,7 +87,7 @@
           <h2>Berita Terbaru</h2>
         </div>
         <div class="section-item">
-          <?php while ($data_berita = mysqli_fetch_array($beritaa, MYSQLI_ASSOC)) {
+          <?php while ($data_berita = mysqli_fetch_array($resultBerita, MYSQLI_ASSOC)) {
             $date = date_create($data_berita['tanggal']);
             $newDate = date_format($date, "d-m-Y"); ?>
             <div class="row">
@@ -96,7 +98,7 @@
                 <div class="section-item-title">
                   <h3><a href=""><?= $data_berita['judul']; ?></a></h3>
                   <div class="section-item-meta">
-                    <span><i class="far fa-calendar-alt"></i><?php $newDate ?></span>
+                    <span><i class="far fa-calendar-alt"></i><?= $newDate ?></span>
                   </div>
                 </div>
                 <span>
@@ -145,7 +147,7 @@
       <section class="galeri">
         <h1>Galeri Foto</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis perspiciatis molestiae facilis autem pariatur! Quidem, minima dolorum? Mollitia esse at corporis alias neque corrupti nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, dignissimos!</p>
-        <?php while ($data_galeri = mysqli_fetch_array($galerii, MYSQLI_ASSOC)) { ?>
+        <?php while ($data_galeri = mysqli_fetch_array($resultGaleri, MYSQLI_ASSOC)) { ?>
           <div class="responsive">
             <div class="gallery">
               <a target="_blank" href="img_fjords.jpg">

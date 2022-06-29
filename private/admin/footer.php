@@ -41,4 +41,5 @@
 
 			<p>Powered by Teknik Informatika UIN Sunan Kalijaga 2022</p>
 		</div>
+	</div>
 </footer>

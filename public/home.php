@@ -17,34 +17,38 @@
     <!-- Awal carousel -->
     <div class="container-fluid">
       <div class="row">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <?php
             $i = 0;
             foreach ($bannerr as $row) {
-              $actives = '';
+              $active = '';
               if ($i == 0) {
-                $actives = 'active';
+                $active = 'class="active" aria-current="true"';
               } ?>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php $i; ?>" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <?php $i++;
-            } ?>
+
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $i ?>" <?= $active ?> aria-label="Slide <?= intval($i) + 1 ?>"></button>
+            <?php
+              $i++;
+            }
+            ?>
           </div>
           <div class="carousel-inner">
             <?php
-            $i = 0;
+            $imgCount = 0;
             foreach ($bannerr as $row) {
-              $actives = '';
-              if ($i == 0) {
-                $actives = 'active';
-              }
-            ?>
-              <div class="carousel-item active">
-                <img src="../assets/img/banner/<?= $row['gambar']; ?>">
-              </div>
-            <?php $i++;
-            } ?>
+              $activeImg = '';
+              if ($imgCount == 0) {
+                $activeImg = 'active';
+              } ?>
 
+              <div class="carousel-item <?= $activeImg ?>">
+                <img src="../../assets/img/banner/<?= $row['gambar'] ?>" style="object-fit: cover;">
+              </div><?php
+
+                    $imgCount++;
+                  }
+                    ?>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

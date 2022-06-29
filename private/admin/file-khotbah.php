@@ -26,12 +26,12 @@ if (isset($_POST['upload'])) {
     } else {
       // else for ukuran
       echo "<script>alert('UKURAN FILE MAKSIMAL 1 MB!')</script>";
-      header("location: file-khotbah.php");
+      return ("location: file-khotbah.php");
     }
   } else {
     // else for ekstensiFile
     echo "<script>alert('FILE ANDA TIDAK SESUAI!')</script>";
-    header("location: file-khotbah.php");
+    return ("location: file-khotbah.php");
   }
 }
 ?>

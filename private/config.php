@@ -1,6 +1,5 @@
 <?php
 /* mysqli_connect for database connection */
-
 $dbHost = 'remotemysql.com';
 $dbUser = 'ruqv5cbA2D';
 $dbPassword = 'TT97lZJdWA';

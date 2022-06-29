@@ -11,8 +11,8 @@ $result = mysqli_query($conn, $query);
     <div class="row">
       <h2 style="text-align: center;">Jadwal Imam, Khotib, dan Muadzin</h2>
       <div class="col-sm-12 services-full-width-text wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft">
-        <a href="input-imam.php" class="btn btn-utama" style="margin-bottom: 30px;">Input Jadwal Imam dan Khotib</a>
-        <table class="table table-hover table-striped">
+        <?php include 'input-imam.php'; ?>
+        <table class="table table-hover table-striped mt-3">
           <tbody style="text-align: center;">
             <tr>
               <th>Tanggal</th>

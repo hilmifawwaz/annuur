@@ -1,6 +1,7 @@
 <?php
 include 'navbar.php';
 include '../config.php';
+$id = $_SESSION['id'];
 
 if (isset($_POST['upload'])) {
   $caption = $_POST['caption'];
@@ -18,18 +19,18 @@ if (isset($_POST['upload'])) {
       $upload = move_uploaded_file($file_tmp, $loc . $nama_file);
 
       if ($upload) {
-        $query = "INSERT INTO `banner` (`gambar`,`caption`,`user_id`) VALUES ($nama_file, $caption, '1')";
+        $query = "INSERT INTO `banner`(`gambar`,`caption`,`user_id`) VALUES ('$nama_file', '$caption', '$id')";
         $result = mysqli_query($conn, $query);
       }
     } else {
       // else for ukuran
       echo "<script>alert('UKURAN GAMBAR MAKSIMAL 2 MB!')</script>";
-      return "tulisberita.php";
+      return "edit-banner.php";
     }
   } else {
     // else for ekstensiFile
     echo "<script>alert('FILE ANDA TIDAK SESUAI!')</script>";
-    return "tulisberita.php";
+    return "edit-banner.php";
   }
 }
 ?>
@@ -53,17 +54,17 @@ if (isset($_POST['upload'])) {
       <button class="btn btn-utama" type="submit" name="upload" class="btn btn-primary">Upload</button>
     </div>
   </form>
-</body>
 
-<body>
   <?php
   $query1 = "SELECT * FROM `banner`";
-  $result1 = mysqli_query($conn, $query1); ?>
-  <div class="section-item">
+  $result1 = mysqli_query($conn, $query1);
+  ?>
+
+  <div class="container section-item mt-4">
     <div class="row">
       <?php while ($data = mysqli_fetch_array($result1, MYSQLI_ASSOC)) { ?>
         <div class="col-md-4">
-          <img src="../../assets/img/banner/<?php $data['gambar'] ?>" alt="">
+          <img src="../../assets/img/banner/<?= $data['gambar'] ?>" alt="">
           <div class="section-item-body">
             <p><?= $data['caption']; ?></p>
           </div>
@@ -72,8 +73,8 @@ if (isset($_POST['upload'])) {
       <?php } ?>
     </div>
   </div>
-</body>
-<br></br>
+</body><br></br>
+
 <?php
 include 'footer.php';
 ?>
