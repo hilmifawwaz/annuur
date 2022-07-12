@@ -2,10 +2,11 @@
 include 'navbar.php';
 include '../config.php';
 
+$id = $_SESSION['id'];
 if (isset($_POST['ubah'])) {
 	$text = ucfirst($_POST['runningtext']);
 
-	$query = "UPDATE `running_text` SET `text`='$text' WHERE `id` LIKE 1";
+	$query = "UPDATE `running_text` SET `text`='$text',`user_id` = '$id' WHERE `id` LIKE 1";
 	$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 	header("location: edit-running-text.php");

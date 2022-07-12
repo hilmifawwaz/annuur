@@ -1,9 +1,9 @@
 <?php
 /* mysqli_connect for database connection */
-$dbHost = 'remotemysql.com';
-$dbUser = 'ruqv5cbA2D';
-$dbPassword = 'TT97lZJdWA';
-$dbName = 'ruqv5cbA2D';
+$dbHost = 'sql6.freemysqlhosting.net';
+$dbUser = 'sql6505252';
+$dbPassword = 'qfagAwgEw3';
+$dbName = 'sql6505252';
 
 // connect to database
 $conn = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);

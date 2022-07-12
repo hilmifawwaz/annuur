@@ -147,7 +147,7 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">
+    <a class="navbar-brand" href="home.php">
       <img src="/assets/img/logomasjid.png" alt="" width="200" height="60" margin="10px">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" a ria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

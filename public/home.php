@@ -131,10 +131,10 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores doloribus nisi ea aut, tenetur id ex fugit quidem nesciunt minima! Quas ut obcaecati tempore!</p>
         </div>
         <div class="pendidikan-col">
-          <a href="pengurus.php">
-            <h3>PENGAJAR</h3>
+          <a href="pengasuh.php">
+            <h3>PENGASUH</h3>
           </a>
-          <a href="pengurus.php">
+          <a href="pengasuh.php">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores doloribus nisi ea aut, tenetur id ex fugit quidem nesciunt minima! Quas ut obcaecati tempore!</p>
           </a>
         </div>

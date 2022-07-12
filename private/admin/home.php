@@ -3,7 +3,7 @@
   include '../config.php';
 
   $queryBanner = "SELECT * FROM `banner`";
-  $queryBerita = "SELECT * FROM `berita` WHERE `status` LIKE 'DITERIMA' ORDER BY `id` DESC";
+  $queryBerita = "SELECT * FROM `berita` WHERE `status` LIKE 'DITERIMA' ORDER BY `id` DESC LIMIT 3";
   $queryGaleri = "SELECT * FROM `galeri`";
 
   $resultBanner = mysqli_query($conn, $queryBanner);
@@ -91,7 +91,7 @@
             $date = date_create($data_berita['tanggal']);
             $newDate = date_format($date, "d-m-Y"); ?>
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 mt-2">
                 <img src="../../assets/img/berita/<?= $data_berita['gambar']; ?>" alt="" style="height: 350px; width: 350px;">
               </div>
               <div class="col-md">
@@ -131,10 +131,10 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores doloribus nisi ea aut, tenetur id ex fugit quidem nesciunt minima! Quas ut obcaecati tempore!</p>
         </div>
         <div class="pendidikan-col">
-          <a href="pengurus.php">
-            <h3>PENGAJAR</h3>
+          <a href="pengasuh.php">
+            <h3>PENGASUH</h3>
           </a>
-          <a href="pengurus.php">
+          <a href="pengasuh.php">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores doloribus nisi ea aut, tenetur id ex fugit quidem nesciunt minima! Quas ut obcaecati tempore!</p>
           </a>
         </div>

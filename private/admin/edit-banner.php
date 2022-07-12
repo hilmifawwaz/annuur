@@ -68,7 +68,7 @@ if (isset($_POST['upload'])) {
           <div class="section-item-body">
             <p><?= $data['caption']; ?></p>
           </div>
-          <a href="" class="btn btn-utama" style="margin-bottom: 30px;">Hapus</a>
+          <a href="delete-banner.php?id=<?= $data['id'] ?>" class="btn btn-danger" style="margin-bottom: 30px;">Hapus</a>
         </div>
       <?php } ?>
     </div>
