@@ -91,7 +91,7 @@
             $date = date_create($data_berita['tanggal']);
             $newDate = date_format($date, "d-m-Y"); ?>
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 mt-2">
                 <img src="/assets/img/berita/<?= $data_berita['gambar']; ?>" alt="" style="height: 350px; width: 350px;">
               </div>
               <div class="col-md">
