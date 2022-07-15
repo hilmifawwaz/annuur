@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include '..\private\config.php';
+require_once('../private/config.php');
 $query = "SELECT * FROM `running_text` WHERE `id` LIKE '1'";
 $result = mysqli_query($conn, $query);
 $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
