@@ -6,9 +6,9 @@ $query = "SELECT * FROM `running_text` WHERE `id` LIKE '1'";
 $result = mysqli_query($conn, $query);
 $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-// $uang = "SELECT (SUM(masuk)-SUM(keluar)) as saldo FROM `keuangan_masjid`";
-// $result2 = mysqli_query($conn, $uang);
-// $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+$uang = "SELECT (SUM(masuk)-SUM(keluar)) as saldo FROM `keuangan_masjid`";
+$result2 = mysqli_query($conn, $uang);
+$data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 
 ?>
 
@@ -128,7 +128,7 @@ $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
             </span></li>
         <li> || </li>
         <li>
-          Saldo :
+          Saldo : <?= $data2['saldo']; ?>
         </li>
       </ul>
     </div>
