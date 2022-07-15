@@ -6,9 +6,9 @@ $query = "SELECT * FROM `running_text` WHERE `id` LIKE '1'";
 $result = mysqli_query($conn, $query);
 $data = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-$uang = "SELECT * FROM `keuangan_masjid`";
-$result2 = mysqli_query($conn, $uang);
-$data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+// $uang = "SELECT (SUM(masuk)-SUM(keluar)) as saldo FROM `keuangan_masjid`";
+// $result2 = mysqli_query($conn, $uang);
+// $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 
 ?>
 
@@ -128,7 +128,7 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
             </span></li>
         <li> || </li>
         <li>
-          Saldo
+          Saldo :
         </li>
       </ul>
     </div>
@@ -188,7 +188,7 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?= $_SESSION['nama']; ?> </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a href="">Halaman TPQ</a></li>
+            <li><a href="https://tpq-annuurr.herokuapp.com/">Halaman TPQ</a></li>
             <li><a href="">Halaman Keuangan</a></li>
             <li><a href="pengaturan.php">Ganti Password</a></li>
             <li><a href="logout.php">Logout</a></li>
