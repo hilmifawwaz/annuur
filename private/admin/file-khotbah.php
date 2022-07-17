@@ -7,7 +7,7 @@ if (isset($_POST['upload'])) {
   $khotib = $_POST['khotib'];
 
   //upload gambar
-  $loc = "assets/doc/";
+  $loc = "../../assets/doc/";
   $ekstensi = ['application/pdf'];
   $nama_file = $_FILES['file']['name'];
   $ukuran = $_FILES['file']['size'];
