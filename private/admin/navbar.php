@@ -129,7 +129,7 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
             </span></li>
         <li> || </li>
         <li>
-          Saldo : <?php $setIDRFormat($data2['saldo']); ?>
+          <!-- Saldo :  -->
         </li>
       </ul>
     </div>
