@@ -173,7 +173,7 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Jadwal Jumat </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a href="imam.php">Imam dan Khotib</a></li>
+            <li><a href="imam.php">Jadwal Khotib</a></li>
             <li><a href="khutbah.php">File Khotbah</a></li>
           </ul>
         </li>

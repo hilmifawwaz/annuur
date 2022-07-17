@@ -30,7 +30,7 @@ if (isset($_POST['upload'])) {
 
     $jumlah_data = 0;
     for ($i = 1; $i < count($sheetData); $i++) {
-      $imam = $sheetData[$i]['1'];
+      $pasaran = $sheetData[$i]['1'];
       $khotib = $sheetData[$i]['2'];
       $tanggal = $sheetData[$i]['3'];
 
@@ -39,7 +39,7 @@ if (isset($_POST['upload'])) {
       $tanggal = $date_explode['2'] . "-" . $date_explode['0'] . "-" . $date_explode['1'];
 
       // query
-      $query = "INSERT INTO `jumatan` (`imam`,`khotib`,`tanggal`) VALUES ('$imam','$khotib','$tanggal')";
+      $query = "INSERT INTO `jumatan` (`pasaran`,`khotib`,`tanggal`) VALUES ('$pasaran','$khotib','$tanggal')";
       $result = mysqli_query($conn, $query);
 
       $jumlah_data++;
@@ -80,7 +80,7 @@ if (isset($_POST['upload'])) {
     <form method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <label for="file" class="form-label">Upload File</label>
-        <input class="form-control" name="file" id="file" type="file" accept="application/pdf">
+        <input class="form-control" name="file" id="file" type="file" accept="">
         <small class="form-text text-muted">
           * Tipe File: xlxs
         </small>

@@ -27,7 +27,7 @@ $result2 = mysqli_query($conn, $query2);
         <img class="img-thumbnail" name="gambar" src="/assets/img/berita/<?= $data['gambar']; ?>" style="height: 450px; width: 600px;" alt="">
       </div>
       <span>
-        <p class="text-dark mt-3" style="line-height: 1.5em; max-height: 7.5em; overflow: hidden;">
+        <p class="text-dark mt-3" style="overflow: hidden; white-space: pre-line;">
           <?= $data['isi']; ?>
         </p>
       </span>

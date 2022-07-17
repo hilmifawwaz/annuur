@@ -6,7 +6,7 @@ if (isset($_POST['upload'])) {
 	$keterangan = $_POST['keterangan'];
 
 	//upload gambar
-	$loc = "assets/img/galeri/";
+	$loc = "../../assets/img/galeri/";
 	$ekstensi = ['image/jpeg', 'image/png'];
 	$nama_file = $_FILES['gambar']['name'];
 	$ukuran = $_FILES['gambar']['size'];

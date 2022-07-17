@@ -23,7 +23,8 @@ $result = mysqli_query($conn, $query);
               <div class="section-item-title">
                 <p><?= $data['judul']; ?></p>
               </div>
-              <div class="section-item-body">
+              <div class="section-item-body" style="white-space: pre-line;">
+                <p>Penulis : <?= $data['nama_pembuat']; ?></p>
                 <p><?= $data['isi']; ?></p>
               </div>
               <a href="confirm-berita.php?id=<?= $data['id']; ?>&confirm=yes" class="btn btn-success" style="margin-bottom: 30px;" name="confirm">Konfirmasi</a>
