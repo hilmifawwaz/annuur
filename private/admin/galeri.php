@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $query);
     <br></br>
     <?php while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
       <div class="responsive">
-        <div class="gallery">
+        <div class="gallery mb-2">
           <a target="_blank">
             <img class='gambar' name='gambar' src="../../assets/img/galeri/<?= $data['gambar']; ?>" width="600" height="400">
           </a>

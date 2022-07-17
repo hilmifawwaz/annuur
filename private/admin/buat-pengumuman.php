@@ -2,12 +2,13 @@
 include 'navbar.php';
 include '../config.php';
 
+$id = $_SESSION['id'];
 if (isset($_POST['submit'])) {
   $judul = $_POST['judul'];
   $isi = $_POST['isi'];
   $tanggal = date("Y-m-d H:i:s");
 
-  $query = "INSERT INTO `pengumuman`(`judul`,`isi`,`tanggal`,`user_id`) VALUES ('$judul', '$isi','$tanggal', '1')";
+  $query = "INSERT INTO `pengumuman`(`judul`,`isi`,`tanggal`,`user_id`) VALUES ('$judul', '$isi','$tanggal', '$id')";
   $result = mysqli_query($conn, $query);
 }
 ?>
