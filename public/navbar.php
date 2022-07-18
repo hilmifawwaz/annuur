@@ -125,9 +125,6 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
               </td>
             </span></li>
         <li> || </li>
-        <li>
-          Saldo : <?= $data2['saldo']; ?>
-        </li>
       </ul>
     </div>
   </div>

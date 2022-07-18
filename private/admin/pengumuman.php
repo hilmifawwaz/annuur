@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $query);
               <span><i class="fa fa-calendar"></i> <?= $changeDate; ?></span>
             </div>
           </div>
-          <div class="section-item-body">
+          <div class="section-item-body" style="white-space: pre-line;">
             <p><?= $data['isi']; ?> </p>
           <?php } ?>
           </div>

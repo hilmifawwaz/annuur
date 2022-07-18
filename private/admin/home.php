@@ -4,11 +4,12 @@
 
   $queryBanner = "SELECT * FROM `banner`";
   $queryBerita = "SELECT * FROM `berita` WHERE `status` LIKE 'DITERIMA' ORDER BY `id` DESC LIMIT 3";
-  $queryGaleri = "SELECT * FROM `galeri`";
+  $queryGaleri = "SELECT * FROM `galeri` ORDER BY `id` DESC LIMIT 12";
 
   $resultBanner = mysqli_query($conn, $queryBanner);
   $resultBerita = mysqli_query($conn, $queryBerita);
   $resultGaleri = mysqli_query($conn, $queryGaleri);
+  $count = 0;
   ?>
 
   <body>
@@ -145,20 +146,27 @@
     <!-- Galeri -->
     <div class="container">
       <section class="galeri">
-        <h1>Galeri Foto</h1>
+        <h1 style="margin-top: 50px; margin-bottom: 20px;">Galeri Foto</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis perspiciatis molestiae facilis autem pariatur! Quidem, minima dolorum? Mollitia esse at corporis alias neque corrupti nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, dignissimos!</p>
-        <?php while ($data_galeri = mysqli_fetch_array($resultGaleri, MYSQLI_ASSOC)) { ?>
+        <?php while ($data = mysqli_fetch_array($resultGaleri, MYSQLI_ASSOC)) { ?>
           <div class="responsive">
-            <div class="gallery">
-              <a target="_blank" href="img_fjords.jpg">
-                <img src="/assets/img/galeri/<?= $data_galeri['gambar']; ?>" width="600" height="400">
+            <div class="gallery mb-2">
+              <a target="_blank">
+                <img class='gambar' name='gambar' src="../../assets/img/galeri/<?= $data['gambar']; ?>" width="600" height="400">
               </a>
-              <div class="desc"><?= $data_galeri['keterangan']; ?></div>
+              <div class="desc"><?= $data['keterangan']; ?></div>
             </div>
-          </div>
-        <?php } ?>
+          </div><?php
+                if ($count == 4) {
+                  echo '<div class="clearfix"></div>';
+                  $count = 1;
+                } else {
+                  $count++;
+                }
+              } ?>
         <div class="clearfix"></div>
-      </section>
+
+        <br></br>
     </div>
 
     <br><br><br><br><br><br>

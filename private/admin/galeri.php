@@ -4,15 +4,16 @@ include '../config.php';
 
 $query = "SELECT * FROM `galeri` ORDER BY `id` DESC";
 $result = mysqli_query($conn, $query);
+$count = 0;
 ?>
 
 <!-- Galeri -->
-</section>
 <div class="container">
   <section class="galeri">
     <h1 style="margin-top: 50px; margin-bottom: 20px;">Galeri Foto</h1>
-    <a href="tambah-foto.php" class="btn btn-utama" style="margin-bottom: 30px;">Tambah Foto</a>
+    <a href="tambah-foto.php" class="btn btn-utama">Tambah Foto</a>
     <br></br>
+
     <?php while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
       <div class="responsive">
         <div class="gallery mb-2">
@@ -21,11 +22,17 @@ $result = mysqli_query($conn, $query);
           </a>
           <div class="desc"><?= $data['keterangan']; ?></div>
         </div>
-      </div>
-    <?php } ?>
+      </div><?php
+            if ($count == 4) {
+              echo '<div class="clearfix"></div>';
+              $count = 1;
+            } else {
+              $count++;
+            }
+          } ?>
     <div class="clearfix"></div>
+
     <br></br>
-  </section>
 </div>
 <?php
 include 'footer.php';

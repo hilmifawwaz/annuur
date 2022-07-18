@@ -190,7 +190,7 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?= $_SESSION['nama']; ?> </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a href="https://tpq-annuurr.herokuapp.com/">Halaman TPQ</a></li>
-            <li><a href="">Halaman Keuangan</a></li>
+            <li><a href="http://keuangan-annuur.herokuapp.com/">Halaman Keuangan</a></li>
             <li><a href="pengaturan.php">Ganti Password</a></li>
             <li><a href="logout.php">Logout</a></li>
           </ul>

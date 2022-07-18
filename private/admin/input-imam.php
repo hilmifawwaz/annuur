@@ -2,7 +2,7 @@
 require '../../vendor/autoload.php';
 
 // include 'navbar.php';
-// include '../config.php';
+include '../config.php';
 
 if (isset($_POST['upload'])) {
   $err = "";
@@ -49,6 +49,7 @@ if (isset($_POST['upload'])) {
       }
     }
   }
+  header("location: imam.php");
 
   if ($err) {
 ?>
@@ -68,7 +69,7 @@ if (isset($_POST['upload'])) {
 ?>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -92,4 +93,4 @@ if (isset($_POST['upload'])) {
   </div>
 </body>
 
-</html>
+</html> -->
