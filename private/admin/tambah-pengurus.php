@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
 	$jabatan = explode("_", $getJabatan);
 
 	//upload gambar
-	$loc = "assets/img/pengurus/";
+	$loc = "../../assets/img/pengurus/";
 	$ekstensi = ['image/jpeg', 'image/png'];
 	$nama_file = $_FILES['gambar']['name'];
 	$ukuran = $_FILES['gambar']['size'];
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 				$query = "UPDATE `pengurus` SET `nama` = '$nama', `jabatan` = '$jabatan[0]', `foto` = '$nama_file' WHERE `id` LIKE '$jabatan[1]'";
 				$result = mysqli_query($conn, $query);
 			} else {
-				echo "GAK BISA SU";
+				echo "FILE GAGAL TERUPLOAD";
 			}
 		} else {
 			// else for ukuran
