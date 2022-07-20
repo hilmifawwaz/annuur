@@ -67,9 +67,6 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
   <div class="bn-label">
     <div class="title-ticker-icon">
       <ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean social-icons-icon-light">
-        <li class="social-icons-facebook"><a href="https://www.facebook.com/annuur.minomartani" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-        <li class="social-icons-facebook"><a href="https://www.instagram.com/annuur.minomartani/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-        <li class="social-icons-facebook"><a href="https://www.youtube.com/channel/UCo8iBY7Zhcy4zfHQLLY2T4g" target="_blank" title="Instagram"><i class="fab fa-youtube"></i></a></li>
         <li class="time">
           <div id="clock">
             <script type="text/javascript">
@@ -123,13 +120,12 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
                   document.write(thisDay + ", " + day + " " + months[month] + " " + year);
                 </script>
               </td>
-            </span></li>
-        <li> || </li>
+        </li>
       </ul>
     </div>
   </div>
   <div class="bn-news">
-    <a href="edit-running-text.php">
+    <a>
       <marquee>
         <h5 size="3" color="white">
           <p>

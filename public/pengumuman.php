@@ -12,7 +12,6 @@ $result = mysqli_query($conn, $query);
     <div class="section-title">
       <h2 style="margin-top: 30px ;">Pengumuman</h2>
     </div>
-    <a href="buat-pengumuman.php" class="btn btn-utama" style="margin-bottom: 30px;">Buat Pengumuman</a>
     <?php while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
       $newDate = date_create($data['tanggal']);
       $changeDate = date_format($newDate, "d-m-Y"); ?>

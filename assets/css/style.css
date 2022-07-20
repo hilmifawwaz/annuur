@@ -17,6 +17,7 @@ a:hover {
   margin-right: 30px;
   font-weight: bold;
 }
+
 .nav-item ul li a {
   font-family: "Poppins", sans-serif;
   color: black;
@@ -24,25 +25,30 @@ a:hover {
   position: relative;
   left: 10px;
 }
+
 .saldo {
   font-family: "Poppins", sans-serif;
   font-style: oblique;
   color: #ff0000;
   font-size: 20px;
 }
+
 .text-navbar {
   color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
   font-size: large;
 }
+
 .bn-news a p {
   position: relative;
   top: 7px;
   color: rgb(255, 255, 255);
   font-family: "Poppins", sans-serif;
 }
+
 .bn-label {
-  height: 100%;
+  width: 100%;
+  min-height: 20%;
   position: absolute;
   background-color: #f2c808;
   text-align: center;
@@ -52,8 +58,20 @@ a:hover {
   padding: 0 15px;
   white-space: nowrap;
 }
+
 .date {
+  /* display: none; */
   color: #008b23;
+}
+
+.title-ticker-icon {
+  display: none;
+  visibility: hidden;
+}
+
+.profile-text {
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .nav-item {
@@ -273,6 +291,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
 .pendidikan-col a {
   color: #000000 !important;
   font-weight: 500;
@@ -352,6 +371,7 @@ img {
   font-weight: 600;
   margin-top: 16px;
 }
+
 .tombol-berita a {
   color: #000000 !important;
   font-weight: 500;
@@ -370,6 +390,7 @@ img {
 .desc {
   font-family: "Poppins", sans-serif;
 }
+
 .galeri h1 {
   font-family: "Poppins", sans-serif;
   font-size: 36px;
@@ -423,6 +444,7 @@ div.desc {
   display: table;
   clear: both;
 }
+
 /*footer*/
 
 .footer {
@@ -567,12 +589,14 @@ div.desc {
   margin: auto;
   text-align: center;
 }
+
 .pengurus h1 {
   font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 50px;
 }
+
 .pengurus-col {
   flex-basis: 100%;
   background: #d4ffcf;
@@ -581,6 +605,7 @@ div.desc {
   padding: 20px 12px;
   box-sizing: border-box;
 }
+
 .pengurus .row {
   margin-top: 5%;
   display: flex;
@@ -753,6 +778,7 @@ div.desc {
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
+
 .service-judul {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05), 0 1px 25px 0 rgba(0, 0, 0, 0.05) inset, 0 -1px 25px 0 rgba(0, 0, 0, 0.05) inset;
 }
@@ -871,11 +897,12 @@ body {
     padding: 40px 15px 15px 15px;
   }
 }
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 /* DESKTOP VERSION */
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   body {
     font-family: "Monstserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
@@ -902,11 +929,13 @@ body {
     padding-bottom: 5px;
     margin-bottom: -8px;
   }
+
   .nav-item {
     font-family: "Poppins", sans-serif;
     margin-right: 30px;
     font-weight: bold;
   }
+
   .nav-item ul li a {
     font-family: "Poppins", sans-serif;
     color: black;
@@ -914,28 +943,31 @@ body {
     position: relative;
     left: 10px;
   }
+
   .saldo {
     font-family: "Poppins", sans-serif;
     font-style: oblique;
     color: #ff0000;
     font-size: 20px;
   }
+
   .text-navbar {
     color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
     font-size: large;
   }
+
   .bn-news a p {
     position: relative;
     top: 7px;
     color: rgb(255, 255, 255);
     font-family: "Poppins", sans-serif;
   }
+
   .bn-label {
-    left: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
+    width: 30%;
+    min-width: 10%;
+    min-height: 10%;
     position: absolute;
     background-color: #008b23;
     text-align: center;
@@ -945,8 +977,20 @@ body {
     padding: 0 15px;
     white-space: nowrap;
   }
+
   .date {
+    /* display: initial; */
     color: #008b23;
+  }
+
+  .title-ticker-icon {
+    display: block;
+    visibility: visible;
+  }
+
+  .profile-text {
+    display: block !important;
+    visibility: visible !important;
   }
 
   .nav-item {
@@ -1144,12 +1188,14 @@ body {
     text-align: center;
     padding-top: -50px;
   }
+
   .pengurus h1 {
     font-family: "Poppins", sans-serif;
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 70px;
   }
+
   .pengurus-col {
     flex-basis: 31%;
     background: #d4ffcf;
@@ -1158,6 +1204,7 @@ body {
     padding: 20px 12px;
     box-sizing: border-box;
   }
+
   .pengurus .row {
     margin-top: 5%;
     display: flex;
@@ -1194,6 +1241,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
+
   .pendidikan-col a {
     color: #000000 !important;
     font-weight: 500;
@@ -1293,6 +1341,7 @@ body {
   .desc {
     font-family: "Poppins", sans-serif;
   }
+
   .galeri h1 {
     font-family: "Poppins", sans-serif;
     font-size: 36px;
@@ -1346,12 +1395,13 @@ body {
     display: table;
     clear: both;
   }
+
   /*footer*/
 
   .footer {
     width: 100%;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
     background-color: #1f1f1f;
   }
 
@@ -1649,6 +1699,7 @@ body {
     -ms-transition: all 0.5s;
     transition: all 0.5s;
   }
+
   .service-judul {
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.05), 0 1px 25px 0 rgba(0, 0, 0, 0.05) inset, 0 -1px 25px 0 rgba(0, 0, 0, 0.05) inset;
   }
@@ -1676,10 +1727,12 @@ body {
     padding-bottom: 7px;
     line-height: 24px;
   }
+
   .service p img {
     height: 1132px;
     width: 800px;
   }
+
   /* Login */
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 

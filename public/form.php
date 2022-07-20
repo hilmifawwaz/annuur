@@ -132,7 +132,7 @@ if (isset($_POST['daftar'])) {
         </div>
         <div class="row">
           <div class="col-sm-3">
-            <label>Infak Bulanan : </label>
+            <label>Kesanggupan Infak Bulanan : </label>
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
               <input type="radio" class="btn-check" name="infak" id="btnradio1" autocomplete="off" value="Rp 50.000" required>
               <label class="btn btn-outline-primary" for="btnradio1">Rp. 50.000</label>
@@ -141,7 +141,7 @@ if (isset($_POST['daftar'])) {
               <label class="btn btn-outline-primary" for="btnradio2">Rp. 70.000</label>
             </div>
           </div>
-          <div class="col-sm-5">
+          <!-- <div class="col-sm-5">
             <div class="form-group">
               <label>Apakah Anda sanggup mentaati tata tertib TPQ An-Nuur? </label>
               <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
@@ -152,8 +152,9 @@ if (isset($_POST['daftar'])) {
                 <label class="btn btn-outline-primary" for="btnradio4">Tidak</label>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
+        <br>
         <div class="row">
           <div class="col-sm-4">
             <button class="btn btn-utama" type="submit" name="daftar" id="submit" class="btn btn-primary">Daftar</button>

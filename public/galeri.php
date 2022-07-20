@@ -11,7 +11,6 @@ $count = 0;
 <div class="container">
   <section class="galeri">
     <h1 style="margin-top: 50px; margin-bottom: 20px;">Galeri Foto</h1>
-    <a href="tambah-foto.php" class="btn btn-utama">Tambah Foto</a>
     <br></br>
 
     <?php while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>

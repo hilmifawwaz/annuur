@@ -72,10 +72,11 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/8CBD9KVNa8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-md-6">
-            <h3>Video Profil Masjid An-Nuur Minomartani</h3>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus possimus voluptatum recusandae cupiditate dolorum ipsum quia consequuntur inventore, maiores magni!
+            <h3 class="profile-text">Video Profil Masjid An-Nuur Minomartani</h3>
+            <p class="profile-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus possimus voluptatum recusandae cupiditate dolorum ipsum quia consequuntur inventore, maiores magni!
+            </p>
             <br></br>
-            <!-- <a href="profil.php" class="btn btn-utama">Baca Selengkapnya</a> -->
           </div>
         </div>
       </div>
