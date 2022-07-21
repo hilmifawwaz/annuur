@@ -7,7 +7,7 @@ include 'navbar.php';
     <div class="container">
       <h1>Pendaftaran Santri Baru TPQ Masjid An-Nuur Minomartani</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi commodi molestiae omnis aliquid ea quisquam. Unde, sit incidunt repellat quidem nihil voluptas tenetur quam!</p>
-      <a href="form.php" class="btn btn-utama">Daftar Sekarang</a>
+      <a href="form2.php" class="btn btn-utama">Daftar Sekarang</a>
 
     </div>
 

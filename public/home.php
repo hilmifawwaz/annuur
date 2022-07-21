@@ -70,13 +70,12 @@
         <h2>Profil Masjid An-Nuur Minomartani</h2>
         <div class="row">
           <div class="col-md-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8CBD9KVNa8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZPJ9RheJlLk&ab_channel=MuhammadAfriandi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-md-6">
             <h3 class="profile-text">Video Profil Masjid An-Nuur Minomartani</h3>
             <p class="profile-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus possimus voluptatum recusandae cupiditate dolorum ipsum quia consequuntur inventore, maiores magni!
-            </p>
+              Masjid An-Nuur Minomartani merupakan sebuah masjid yang tidak hanya digunakan sebagai tempat ibadah umat muslim oleh masyarakat sekitar namun juga di masjid ini terdapat Taman Pendidikan Al-Qur’an (TPQ), Pengajian, dan masih banyak lagi kegiatan lainnya yang tentunya positif. Masjid ini berlokasi di Jalan Lele VIII Perumahan Minomartani, Ngaglik, Sleman. </p>
             <br></br>
           </div>
         </div>

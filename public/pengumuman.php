@@ -27,12 +27,9 @@ $result = mysqli_query($conn, $query);
             <p><?= $data['isi']; ?> </p>
           <?php } ?>
           </div>
-
         </div>
       </div>
-      <br><br>
-
-
+      <br>
   </div>
 </section>
 
