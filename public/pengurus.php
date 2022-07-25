@@ -14,9 +14,9 @@ $result = mysqli_query($conn, $query);
   <div class="row">
     <?php while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
       <div class="pengurus-col">
-        <h3><?= $data['jabatan']; ?></h3>
         <img src="/assets/img/pengurus/<?= $data['foto']; ?>" alt="" style="height: 200px; width: 200px; border-radius: 50%;">
-        <p><?= $data['nama']; ?></p>
+        <h4><?= $data['nama']; ?></h4>
+        <h6><?= $data['jabatan']; ?></h6>
       </div>
     <?php } ?>
   </div>

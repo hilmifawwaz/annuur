@@ -599,7 +599,7 @@ div.desc {
 
 .pengurus-col {
   flex-basis: 100%;
-  background: #d4ffcf;
+  background: #ffff;
   border-radius: 10px;
   margin-bottom: 5%;
   padding: 20px 12px;
@@ -1198,7 +1198,7 @@ body {
 
   .pengurus-col {
     flex-basis: 31%;
-    background: #d4ffcf;
+    background: #ffff;
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
