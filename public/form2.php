@@ -23,7 +23,7 @@ if (isset($_POST['tambah'])) {
   $query = "INSERT INTO santri(`nama_lengkap`, `panggilan`, `tempat_lahir`, `tgl_lahir`, `jenjang_sekolah`, `kelas`, 
             `nama_bapak`, `pekerjaan_bapak`, `nama_ibu`, `pekerjaan_ibu`, `no_telp_ortu`, `alamat_ortu`, `infak_bulanan`)
             VALUES ('$namaLengkap', '$panggilan', '$tempatLahir', '$tglLahir', '$jenjangSekolah', '$kelas',
-            '$telpSantri', '$namaBpk', '$profesiBpk', '$namaIbu', '$profesiIbu', '$telpWali', '$alamat', '$infakBulanan')";
+            '$namaBpk', '$profesiBpk', '$namaIbu', '$profesiIbu', '$telpWali', '$alamat', '$infakBulanan')";
   $result = mysqli_query($conn, $query);
 
   $tanggal = date("Y-m-d");
@@ -111,7 +111,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="kelas" class="col-sm-2 col-form-label">Kelas</label>
               <div class="col-sm-10">
-                <input type="text" name="kelas" class="form-control" id="kelas" required>
+                <input type="number" name="kelas" class="form-control" id="kelas" required>
                 <!-- <small class="form-text text-muted">
                   * Untuk jenjang PAUD/PRA TK dan TK/RA isi dengan angka 0
                 </small> -->
@@ -122,7 +122,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="namaWali" class="col-sm-2 col-form-label">Nama Bapak</label>
               <div class="col-sm-10">
-                <input type="text" name="namaBpk" class="form-control" id="namaWali" required>
+                <input type="text" name="namaBpk" class="form-control" id="namaBpk" required>
               </div>
             </div><br>
 
@@ -130,7 +130,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="pekerjaanWali" class="col-sm-2 col-form-label">Profesi Bapak</label>
               <div class="col-sm-10">
-                <input type="text" name="profesiBpk" class="form-control" id="pekerjaanWali" required>
+                <input type="text" name="profesiBpk" class="form-control" id="pekerjaanBpk" required>
               </div>
             </div><br>
 
@@ -138,7 +138,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="namaWali" class="col-sm-2 col-form-label">Nama Ibu</label>
               <div class="col-sm-10">
-                <input type="text" name="namaIbu" class="form-control" id="namaWali" required>
+                <input type="text" name="namaIbu" class="form-control" id="namaIbu" required>
               </div>
             </div><br>
 
@@ -146,7 +146,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="namaWali" class="col-sm-2 col-form-label">Profesi Ibu</label>
               <div class="col-sm-10">
-                <input type="text" name="profesiIbu" class="form-control" id="namaWali" required>
+                <input type="text" name="profesiIbu" class="form-control" id="namaIbu" required>
               </div>
             </div><br>
 
