@@ -6,7 +6,6 @@ $query = "SELECT * FROM `berita` WHERE `status` LIKE 'DITERIMA' ORDER BY `id` DE
 $result = mysqli_query($conn, $query);
 ?>
 
-
 <!-- Berita -->
 <div class="col-md-9 recent-posts" style="margin: auto;">
   <div class="section-title">
@@ -35,6 +34,10 @@ $result = mysqli_query($conn, $query);
             </p>
           </span>
           <a href="page-berita.php?id=<?= $data['id'] ?>" class="btn btn-utama" style="margin-bottom: 30px;">Baca Selengkapnya</a>
+          <a href="delete-berita.php?id=<?= $data['id'] ?>" class="btn btn-danger" style="margin-bottom: 30px;">
+            <span><i class="bi bi-trash"></i></span>
+            <span>Hapus</span>
+          </a>
         </article>
       </div>
     <?php } ?>

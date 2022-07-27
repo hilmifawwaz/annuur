@@ -63,6 +63,8 @@ $data2 = mysqli_fetch_array($result2, MYSQLI_ASSOC);
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
   <link rel="shortcut icon" href="/img/favicon.png">
+  <!-- Bootsrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <title>Website Masjid An-Nuur</title>
 </head>
 <!-- Ticker -->
