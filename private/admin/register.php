@@ -20,8 +20,15 @@ if (isset($_POST['login'])) {
 
 <body>
   <div class="wrapper">
-    <div class="text-center mt-4 name">TAMBAH AKUN</div>
-    <form class="p-3 mt-3" method="post">
+    <div class="text-center mt-4 name">REGISTER AKUN</div>
+    <form method="post">
+
+      <div class="form-group row">
+        <label for="namaLengkap" class="col-sm-2 col-form-label">Nama</label>
+        <div class="col-sm-10">
+          <input type="text" name="nama" class="form-control" id="nama" required>
+        </div>
+      </div><br>
       <div class="form-field d-flex align-items-center">
         <span class="far fa-user"></span>
         <input type="text" name="nama" id="nama" placeholder="Nama" />
