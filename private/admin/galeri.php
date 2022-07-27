@@ -21,6 +21,9 @@ $count = 0;
             <img class='gambar' name='gambar' src="../../assets/img/galeri/<?= $data['gambar']; ?>" width="600" height="400">
           </a>
           <div class="desc"><?= $data['keterangan']; ?></div>
+          <a href="delete-galeri.php?id=<?= $data['id'] ?>" class="btn btn-danger btn-block">
+            <span><i class="bi bi-trash"></i>Hapus</span>
+          </a>
         </div>
       </div><?php
             if ($count == 4) {

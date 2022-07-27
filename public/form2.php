@@ -4,7 +4,21 @@ include 'navbar.php';
 // require_once('../../../akses.php');
 
 // form tambah data
+$getYear = date("Y");
+
+// form tambah data
 if (isset($_POST['tambah'])) {
+  // set Nomor Induk Santri
+  $queryCheck = "SELECT nis FROM santri WHERE nis LIKE '%$getYear%' ORDER BY nis DESC LIMIT 1";
+  $resultCheck = mysqli_query($conn, $queryCheck);
+  $dataCheck = mysqli_fetch_array($resultCheck, MYSQLI_ASSOC);
+  if (!empty($dataCheck['nis'])) {
+    $setNIS = $dataCheck['nis'] + 1;
+  } else {
+    $setNIS = $getYear . "001";
+  }
+
+  // get data from form
   $namaLengkap = addslashes($_POST['namaLengkap']);
   $panggilan = addslashes(ucwords($_POST['panggilan']));
   $tempatLahir = addslashes(ucwords($_POST['tempat']));
@@ -12,23 +26,20 @@ if (isset($_POST['tambah'])) {
   $tglLahir = formatTanggal($tglLahir);
   $jenjangSekolah = $_POST['jenjangSekolah'];
   $kelas = $_POST['kelas'];
-  $namaBpk = addslashes($_POST['namaBpk']);
-  $profesiBpk = addslashes($_POST['profesiBpk']);
+  // wali section
+  $namaBapak = addslashes($_POST['namaBpk']);
+  $pekerjaanBapak = addslashes($_POST['profesiBpk']);
   $namaIbu = addslashes($_POST['namaIbu']);
-  $profesiIbu = addslashes($_POST['profesiIbu']);
+  $pekerjaanIbu = addslashes($_POST['profesiIbu']);
   $telpWali = $_POST['telpWali'];
   $alamat = addslashes($_POST['alamat']);
   $infakBulanan = $_POST['infak'];
 
-  $query = "INSERT INTO santri(`nama_lengkap`, `panggilan`, `tempat_lahir`, `tgl_lahir`, `jenjang_sekolah`, `kelas`, 
-            `nama_bapak`, `pekerjaan_bapak`, `nama_ibu`, `pekerjaan_ibu`, `no_telp_ortu`, `alamat_ortu`, `infak_bulanan`)
-            VALUES ('$namaLengkap', '$panggilan', '$tempatLahir', '$tglLahir', '$jenjangSekolah', '$kelas',
-            '$namaBpk', '$profesiBpk', '$namaIbu', '$profesiIbu', '$telpWali', '$alamat', '$infakBulanan')";
+  $query = "INSERT INTO santri(`nis`, `nama_lengkap`, `panggilan`, `tempat_lahir`, `tgl_lahir`, `jenjang_sekolah`, `kelas`,
+            `nama_bapak`, `pekerjaan_bapak`,`nama_ibu`, `pekerjaan_ibu`, `no_telp_ortu`, `alamat_ortu`, `infak_bulanan`)
+            VALUES ('$setNIS', '$namaLengkap', '$panggilan', '$tempatLahir', '$tglLahir', '$jenjangSekolah', '$kelas',
+            '$namaBapak', '$pekerjaanBapak','$namaIbu', '$pekerjaanIbu', '$telpWali', '$alamat', '$infakBulanan')";
   $result = mysqli_query($conn, $query);
-
-  $tanggal = date("Y-m-d");
-  $newQuery = "INSERT INTO `penilaian`(`santri_induk`, `jenjang_id`, `tanggal`, `keterangan`, `pengajar_id`) VALUES ('$nis', '0', '$tanggal', 'Santri Baru', '3')";
-  $newResult = mysqli_query($conn, $newQuery);
 
   header("Location: form2.php");
 }
@@ -43,12 +54,6 @@ function formatTanggal($date)
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>TPQ - Masjid Annuur</title>
-  <!-- style css -->
-  <link rel="stylesheet" href="/user/admin/layout/style.css" />
-  <link rel="shortcut icon" href="/assets/image/logo-annur-bulat.png">
-</head>
 
 <body>
 
@@ -112,9 +117,9 @@ function formatTanggal($date)
               <label for="kelas" class="col-sm-2 col-form-label">Kelas</label>
               <div class="col-sm-10">
                 <input type="number" name="kelas" class="form-control" id="kelas" required>
-                <!-- <small class="form-text text-muted">
+                <small class="form-text text-muted">
                   * Untuk jenjang PAUD/PRA TK dan TK/RA isi dengan angka 0
-                </small> -->
+                </small>
               </div>
             </div><br>
 
@@ -130,7 +135,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="pekerjaanWali" class="col-sm-2 col-form-label">Profesi Bapak</label>
               <div class="col-sm-10">
-                <input type="text" name="profesiBpk" class="form-control" id="pekerjaanBpk" required>
+                <input type="text" name="profesiBpk" class="form-control" id="profesiBpk" required>
               </div>
             </div><br>
 
@@ -146,7 +151,7 @@ function formatTanggal($date)
             <div class="form-group row">
               <label for="namaWali" class="col-sm-2 col-form-label">Profesi Ibu</label>
               <div class="col-sm-10">
-                <input type="text" name="profesiIbu" class="form-control" id="namaIbu" required>
+                <input type="text" name="profesiIbu" class="form-control" id="profesiIbu" required>
               </div>
             </div><br>
 
@@ -187,12 +192,6 @@ function formatTanggal($date)
                 </label>
               </div>
             </div>
-            <!-- <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-              <label class="form-check-label" for="flexCheckChecked">
-                Dengan ini kami menyetujui segala peraturan yang berlaku di TPQ An-Nuur
-              </label>
-            </div> -->
 
             <!-- Button -->
             <div class="text-end">

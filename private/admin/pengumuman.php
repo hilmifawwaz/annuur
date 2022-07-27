@@ -26,9 +26,12 @@ $result = mysqli_query($conn, $query);
           </div>
           <div class="section-item-body" style="white-space: pre-line;">
             <p><?= $data['isi']; ?> </p>
+            <a href="delete-pengumuman.php?id=<?= $data['id'] ?>" class="btn btn-danger" style="margin-bottom: 30px;">
+              <span><i class="bi bi-trash"></i></span>
+              <span>Hapus</span>
+            </a>
           <?php } ?>
           </div>
-
         </div>
       </div>
       <br><br>
